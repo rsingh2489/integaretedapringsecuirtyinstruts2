@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+        
+<struts>
+    <constant name="struts.devMode" value="true"/>
+    
+    <package name="default" namespace="/" extends="struts-default">  
+       
+        <action name="login">
+            <result name="success">/WEB-INF/pages/login.jsp</result>
+        </action>
+        
+        <action name="welcome" class="com.struts2.springsecurity4.tiles.action.MainAction">
+            <result name="success">/WEB-INF/pages/home/welcome.jsp</result>
+        </action>
+        <action name="admin" class="com.struts2.springsecurity4.tiles.action.MainAction">
+            <result name="success">/WEB-INF/pages/admin/index.jsp</result>
+        </action> 
+        <action name="user" class="com.struts2.springsecurity4.tiles.action.MainAction">
+            <result name="success">/WEB-INF/pages/user/index.jsp</result>
+        </action> 
+        <action name="superadmin" class="com.struts2.springsecurity4.tiles.action.MainAction">
+            <result name="success">/WEB-INF/pages/superadmin/index.jsp</result>
+        </action> 
+        
+        <action name="register" class="com.struts2.springsecurity4.tiles.action.RegisterAction">
+            <result name="success">/WEB-INF/pages/user/registerSubmit.jsp</result>
+        </action> 
+        
+        <action name="logout">
+            <result name="success">/WEB-INF/pages/login.jsp</result>
+        </action>
+   
+        
+        
+    </package>
+</struts>
